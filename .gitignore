@@ -1,0 +1,10 @@
+# Nuxt dev/build outputs
+.cache
+
+# Node dependencies
+node_modules
+
+# Misc
+.DS_Store
+.fleet
+.idea

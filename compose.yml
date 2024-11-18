@@ -1,0 +1,13 @@
+services:
+  # frontend
+  app:
+    build: # admin
+      context: ./app
+      dockerfile: Dockerfile
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - "3000:3000"
+    command: sh -c 'yarn && yarn dev'
+    volumes:
+      - ./app:/usr/src/app
