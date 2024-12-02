@@ -13,6 +13,9 @@ export default defineNuxtConfig({
       config.plugins!.push(vuetify());
     },
   },
+  modules: [
+    "@nuxt/image",
+  ],
   vite: {
     ssr: {
       noExternal: ["vuetify"],
