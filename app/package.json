@@ -10,15 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@mdi/js": "^7.4.47",
-    "@nuxt/image": "^1.8.1",
-    "@supabase/supabase-js": "^2.46.1",
-    "dayjs": "^1.11.13",
-    "nuxt": "^3.14.159",
-    "sass": "^1.81.0",
-    "vite-plugin-vuetify": "^2.0.4",
+    "@mdi/js": "latest",
+    "@nuxt/image": "latest",
+    "@supabase/supabase-js": "latest",
+    "dayjs": "latest",
+    "nuxt": "latest",
+    "sass": "latest",
+    "vite-plugin-vuetify": "latest",
     "vue": "latest",
     "vue-router": "latest",
-    "vuetify": "^3.7.4"
+    "vuetify": "latest"
   }
 }
