@@ -19,6 +19,7 @@
     "vite-plugin-vuetify": "latest",
     "vue": "latest",
     "vue-router": "latest",
+    "vuedraggable": "^4.1.0",
     "vuetify": "latest"
   }
 }
