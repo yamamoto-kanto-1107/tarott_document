@@ -7,6 +7,4 @@ services:
       TZ: Asia/Tokyo
     ports:
       - "3000:3000"
-    command: sh -c 'yarn && yarn dev --hostname 0.0.0.0'
-    volumes:
-      - ./app:/usr/src/app
+    restart: always
