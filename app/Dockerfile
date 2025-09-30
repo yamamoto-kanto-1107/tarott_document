@@ -10,14 +10,14 @@ RUN yarn -v
 RUN npm -v
 RUN echo "second"
 
-COPY . .
+# COPY . .
 
-RUN yarn build
+# RUN yarn build
 
-RUN echo "third"
+# RUN echo "third"
 
-EXPOSE 3000
+# EXPOSE 3000
 
-CMD ["yarn", "start"]
+# CMD ["yarn", "start"]
 
-RUN echo "last"
+# RUN echo "last"
