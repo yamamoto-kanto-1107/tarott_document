@@ -1,23 +1,23 @@
-FROM node:22-alpine
-WORKDIR /usr/src/app
+FROM node:20
 
-# Alpine のビルドツール追加（ネイティブモジュール対応）
-RUN apk add --no-cache python3 g++ make
+WORKDIR /app
 
-# corepack 有効化
-RUN corepack enable
+# Corepackを無効化
+RUN corepack disable
 
-# package.json と lock ファイルだけコピー
+# Yarn 1.x を直接インストール
+RUN npm install -g yarn@1.22.22
+
+# package.json と yarn.lock をコピー
 COPY package.json yarn.lock ./
 
-# Yarn で依存関係インストール
-RUN yarn install
+# 環境変数でSSL設定を緩和（テスト用）
+ENV NODE_TLS_REJECT_UNAUTHORIZED=0
 
-# 残りのソースコードをコピー
+# Yarnインストール実行
+RUN yarn install --frozen-lockfile --network-timeout 600000
+
+# ソースコードをコピー
 COPY . .
 
-# ビルド
-RUN yarn build
-
-EXPOSE 3000
-CMD ["yarn", "start"]
+CMD ["yarn", "dev"]

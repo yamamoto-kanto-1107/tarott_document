@@ -1,10 +1,20 @@
+version: '3.8'
+
 services:
   app:
     build:
-      context: ./app
+      context: .
       dockerfile: Dockerfile
-    environment:
-      TZ: Asia/Tokyo
+    # DNS設定を追加
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    # ネットワークモードを確認
+    network_mode: bridge
     ports:
       - "3000:3000"
-    restart: always
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/app
+      - /app/node_modules
