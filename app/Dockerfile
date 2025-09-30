@@ -3,4 +3,4 @@ WORKDIR /usr/src/app
 
 RUN corepack enable
 COPY package*.json ./
-RUN yarn install
+RUN yarn install --verbose
