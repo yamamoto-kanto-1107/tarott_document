@@ -6,6 +6,7 @@ RUN corepack enable
 RUN echo "first"
 
 COPY package*.json .
+RUN yarn install
 RUN yarn -v
 RUN npm -v
 RUN echo "second"
@@ -19,5 +20,3 @@ RUN echo "third"
 EXPOSE 3000
 
 CMD ["yarn", "start"]
-
-RUN echo "last"
