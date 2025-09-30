@@ -6,7 +6,7 @@ RUN corepack enable
 RUN echo "first"
 
 COPY package*.json .
-RUN yarn install
+# RUN yarn install
 RUN echo "second"
 
 COPY . .
